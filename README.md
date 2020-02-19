@@ -102,11 +102,35 @@ jobs:
 
 ## How do you use Github Actions? 
 
+GitHub Actions or Workflow Actions, the name is used intercangable sometimes, can be though of as predefined steps with well defined inputs and behaviour. Actions also allow for the posibility of execution in a user defined container.  
 
-``` txt
+"""
 You can create actions by writing custom code that interacts with your repository in any way you'd like, including integrating with GitHub's APIs and any publicly available third-party API. For example, an action can publish npm modules, send SMS alerts when urgent issues are created, or deploy production-ready code.
 
+"""
+Maybe the most common action to include in a workflow is the cloning of the git repository in to the workflow enviroment. 
+
+```yaml
+name: Pull request check
+on:
+  pull_request:
+    types: [opened]
+
+jobs:
+  first-job:
+    runs-on: [ubuntu-latest]
+    steps:
+     - name: What ever you like
+        run: |
+            echo "Hello world" 
+            
+     - name: Checkout the source code
+       uses: actions/checkout@master
 ```
+
 
 ## How do you build your own Github Actions? 
 
+There are two types of actions: 
+- JavaScript action
+- Docker container action
