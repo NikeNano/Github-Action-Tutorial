@@ -19,7 +19,7 @@ I found it hard to learn about how to set up and use github actions and there ar
 
 ### How? 
 
-Examples that can be used will be created and illustrated. 
+Examples presented below. 
 
 
 ## What is a Workflow? 
