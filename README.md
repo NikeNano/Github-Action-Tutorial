@@ -103,6 +103,10 @@ jobs:
 ## How do you use Github Actions? 
 
 
+``` txt
+You can create actions by writing custom code that interacts with your repository in any way you'd like, including integrating with GitHub's APIs and any publicly available third-party API. For example, an action can publish npm modules, send SMS alerts when urgent issues are created, or deploy production-ready code.
+
+```
 
 ## How do you build your own Github Actions? 
 
