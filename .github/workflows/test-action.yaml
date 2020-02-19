@@ -8,7 +8,7 @@ jobs:
     runs-on: [ubuntu-latest]
     steps:
      - name: What ever you like
-        run: |
+       run: |
             echo "Hello world" 
             
      - name: Checkout the source code
