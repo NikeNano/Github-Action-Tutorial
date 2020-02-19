@@ -9,7 +9,7 @@ The goal with this repository is to help and illustrate how to do the following 
 - Use Github Actions 
 - Build Github Actions
 
-If you would like to use github actions or want inspiration I recomend (this)[https://github.com/sdras/awesome-actions] repository. 
+If you would like to use github actions or want inspiration I recomend [this](https://github.com/sdras/awesome-actions) repository. 
 
 
 ### Why?
