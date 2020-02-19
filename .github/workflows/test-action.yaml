@@ -7,10 +7,14 @@ jobs:
   first-job:
     runs-on: [ubuntu-latest]
     steps:
-     - name: What ever you like
-       run: |
+    - name: What ever you like
+      run: |
             echo "Hello world" 
             
-     - name: Checkout the source code
-       uses: actions/checkout@master
-       args: "pylint **/*.py"
+    - name: Checkout the source code
+      uses: actions/checkout@master
+       
+    - name: Python Pylin GitHub Action
+      uses: fylein/python-pylint-github-action@v1
+      with:
+        args: pip3 install -r requirements.txt && pylint **/*.py
