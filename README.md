@@ -22,7 +22,7 @@ I found it hard to learn about how to set up and use github actions and there ar
 Examples that can be used will be created and illustrated. 
 
 
-## What is a Github Action vs Workflow? 
+## What is a Workflow? 
 
 A Github Workflow defines what to do when. When could be: 
 
@@ -100,7 +100,7 @@ jobs:
 ```
 
 
-## How do you use Github Actions? 
+## How do you use Workflow Actions? 
 
 GitHub Actions or Workflow Actions, the name is used intercangable sometimes, can be though of as predefined steps with well defined inputs and behaviour. Actions also allow for the posibility of execution in a user defined container.  
 
