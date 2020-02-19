@@ -1,7 +1,7 @@
 name: Pull request check
 on:
   pull_request:
-    types: [opened]
+    types: [opened, edited, synchronize, reopened]
 
 jobs:
   first-job:
