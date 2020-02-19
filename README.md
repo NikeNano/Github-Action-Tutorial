@@ -45,7 +45,7 @@ on:
 - An external event occurs.
 More info can be found [here](https://help.github.com/en/actions/configuring-and-managing-workflows/configuring-a-workflow#triggering-a-workflow-with-events). 
 
-The what to do is defined as [jobs](https://help.github.com/en/actions/getting-started-with-github-actions/core-concepts-for-github-actions#job), each workflow needs to have at least one job. Each job can have one or multiple steps. A step is described by [github](https://help.github.com/en/actions/getting-started-with-github-actions/core-concepts-for-github-actions#job) like this: 
+The what to do is defined as [jobs](https://help.github.com/en/actions/getting-started-with-github-actions/core-concepts-for-github-actions#job), each workflow needs to have at least one job. 
 
 Exemple workflow: 
 
@@ -56,13 +56,26 @@ on:
     types: [opened]
 
 jobs:
-  preprocessing:
+  first-job:
 ```
+
+Each job can have one or multiple steps. A step is described by [github](https://help.github.com/en/actions/getting-started-with-github-actions/core-concepts-for-github-actions#job) like this: 
 
 """
 A step is a set of tasks performed by a job. Each step in a job executes in the same runner, allowing the actions in that job to share information using the filesystem. Steps can run commands or actions.
 """
 
+```yaml
+name: Pull request check
+on:
+  pull_request:
+    types: [opened]
+
+jobs:
+  first-job:
+    runs-on: [ubuntu-latest]
+    steps:
+```
 [Runner](https://help.github.com/en/actions/getting-started-with-github-actions/core-concepts-for-github-actions#runner) is the type of machine the action is executed on there are a couple of options supplied by github. 
 
 - Windows Server 2019:	windows-latest or windows-2019
@@ -70,9 +83,26 @@ A step is a set of tasks performed by a job. Each step in a job executes in the 
 - Ubuntu 16.04:	ubuntu-16.04
 - macOS Catalina 10.15:	macos-latest or macos-10.15
 
-A step can execute pretty much what ever you like on "your" assigned machine. However the best-practice way to do more complex processes are to use Github Actions. Actions will be describe in the next session. 
+A step can execute pretty much what ever you like on "your" assigned machine. However the best-practice way to do more complex processes are to use Github Actions. Actions will be describe in the next session.
+```yaml
+name: Pull request check
+on:
+  pull_request:
+    types: [opened]
+
+jobs:
+  first-job:
+    runs-on: [ubuntu-latest]
+    steps:
+     - name: What ever you like
+        run: |
+            echo "Hello world" 
+```
+
 
 ## How do you use Github Actions? 
+
+
 
 ## How do you build your own Github Actions? 
 
