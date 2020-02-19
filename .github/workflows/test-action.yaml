@@ -13,4 +13,4 @@ jobs:
             
      - name: Checkout the source code
        uses: actions/checkout@master
-       args = "pylint **/*.py"
+       args: "pylint **/*.py"
