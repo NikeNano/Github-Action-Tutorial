@@ -102,7 +102,7 @@ jobs:
 
 ## How do you use Workflow Actions? 
 
-GitHub Actions or Workflow Actions, the name is used intercangable sometimes, can be though of as predefined steps with well defined inputs and behaviour. Actions also allow for the posibility of execution in a user defined container.  
+GitHub Actions or Workflow Actions, the name is used intercangable sometimes, can be though of as predefined steps with well defined inputs and behaviour, this is the lowest level of execution. The goal with actions is also to allow the step to be shared between workflows . Actions also allow for the posibility of execution in a user defined container.  
 
 """
 You can create actions by writing custom code that interacts with your repository in any way you'd like, including integrating with GitHub's APIs and any publicly available third-party API. For example, an action can publish npm modules, send SMS alerts when urgent issues are created, or deploy production-ready code.
